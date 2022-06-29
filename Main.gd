@@ -10,10 +10,11 @@ func set_bricks():
 	var hsv_hue = randf()
 	for i in range(4):
 		var hsv_saturation = randf()
-		var hsv_value = randf()
+		var hsv_value = rand_range(0.2,1)
 		for j in range(13):
 			var brick=br.instance()
-			brick.get_node("Sprite").modulate = Color.from_hsv(hsv_hue,hsv_saturation,hsv_value)
+			var color = Color.from_hsv(hsv_hue,hsv_saturation,hsv_value)
+			brick.get_node("Sprite").modulate = color
 			brick.position=Vector2(100+70 * (j), 70+50*i)
 			numbricks += 1
 			add_child(brick)

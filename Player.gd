@@ -1,6 +1,6 @@
 extends KinematicBody2D
 
-var speed = 900
+var speed = 1100
 var velocity = Vector2()
 var paused = false
 
