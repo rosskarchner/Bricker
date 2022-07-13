@@ -1,7 +1,8 @@
 extends Node2D
 
 onready var br=preload("res://Brick.tscn")
-onready var ball_class= preload("res://Ball.tscn")
+onready var ball_class= preload("res://KinematicBall.tscn")
+
 
 var lives_remaining = 3
 
@@ -25,11 +26,12 @@ func set_paddle():
 func start_ball():
 	var new_ball = ball_class.instance()
 	new_ball.position = Vector2(212,300)
+	
 
 	var notifier = new_ball.get_node("BallVisibilityNotifier")
 	notifier.connect("screen_exited", self, "ball_exited_screen")
 	add_child(new_ball)
-	new_ball.apply_impulse(Vector2.ZERO, Vector2(500,500))
+	#new_ball.apply_impulse(Vector2.ZERO, Vector2(500,500))
 
 # Called when the node enters the scene tree for the first time.
 func _ready():

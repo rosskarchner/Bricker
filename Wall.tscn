@@ -6,6 +6,7 @@
 extents = Vector2( 5.5, 305.5 )
 
 [node name="Wall" type="StaticBody2D"]
+rotation = -0.00174533
 __meta__ = {
 "_edit_group_": true
 }
