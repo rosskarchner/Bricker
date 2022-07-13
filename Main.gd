@@ -1,7 +1,7 @@
 extends Node2D
 
 onready var br=preload("res://Brick.tscn")
-onready var ball_class= preload("res://KinematicBall.tscn")
+onready var ball_class= preload("res://Ball.tscn")
 
 
 var lives_remaining = 3
